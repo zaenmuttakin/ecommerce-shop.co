@@ -1,3 +1,45 @@
+@import "./assets/fonts/index.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-white font-satoshi;
+  }
+}
+
+@layer components {
+  .main-container {
+    @apply container mx-auto p-[16px] xl:p-0;
+  }
+}
+
+@layer utilities {
+  h1 {
+    @apply font-integral text-[36px] xl:text-[64px];
+  }
+  h2 {
+    @apply font-integral text-[32px] xl:text-[48px];
+  }
+  h3 {
+    @apply font-integral text-[32px] xl:text-[40px];
+  }
+
+  .tx-1 {
+    @apply font-satoshi text-[12px] xl:text-[14px];
+  }
+  .tx-2 {
+    @apply font-satoshi text-[14px] xl:text-[16px];
+  }
+  .tx-3 {
+    @apply font-satoshi text-[20px] xl:text-[24px];
+  }
+  .tx-4 {
+    @apply font-satoshi text-[24px] xl:text-[36px];
+  }
+  .tx-5 {
+    @apply font-satoshi text-[24px] xl:text-[40px];
+  }
+}
