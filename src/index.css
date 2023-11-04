@@ -12,7 +12,7 @@
 
 @layer components {
   .main-container {
-    @apply container mx-auto p-[16px] xl:p-0;
+    @apply container px-[16px] xl:px-0;
   }
 }
 

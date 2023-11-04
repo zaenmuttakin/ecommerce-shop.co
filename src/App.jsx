@@ -1,10 +1,8 @@
-
+import Homepage from "./pages/home"
 function App() {
 
   return (
-    <h1 className="text-black-100">
-      hellocode
-    </h1>
+    <Homepage />
   )
 }
 
