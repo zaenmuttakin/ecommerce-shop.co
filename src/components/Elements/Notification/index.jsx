@@ -14,12 +14,12 @@ const Notification = () => {
       <div className="main-container relative text-center">
         <p className="tx-1 text-white">
           Sign up and get 20% off to your first order.{" "}
-          <a href="#" className="font-bold hover:underline">
+          <a href="#" className="font-bold link">
             Sign Up Now
           </a>
         </p>
         <button className="absolute top-0 right-0 hidden xl:block" onClick={() => closeNotif()} >
-          <i className="ic-x tx-1 text-white" />
+          <i className="ic-x tx-3 text-white" />
         </button>
       </div>
     </div>

@@ -42,4 +42,7 @@
   .tx-5 {
     @apply font-satoshi text-[24px] xl:text-[40px];
   }
+  .link {
+    @apply hover:underline hover:underline-offset-8;
+  }
 }

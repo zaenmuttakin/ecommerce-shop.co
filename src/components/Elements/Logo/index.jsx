@@ -1,8 +1,11 @@
-import {logo} from "../../../constants/pagesData"
-const Logo = () => {
-    return (
-        <h4 className="">{logo.text}</h4>
-    )
-}
+import { logoImage } from "../../../assets/images";
 
-export default Logo
+const Logo = ({styles}) => {
+  return (
+    <a href="#" className={`scale-75 xl:scale-100 ${styles}`}>
+      <img src={logoImage} alt="logo" />
+    </a>
+  );
+};
+
+export default Logo;

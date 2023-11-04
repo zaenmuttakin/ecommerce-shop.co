@@ -1,7 +1,11 @@
-const coba = {
-    text : "try",
-}
+const category = [
+    "t-shirt",
+    "shorts",
+    "shirts",
+    "hoodies",
+    "jeans",
+]
 
 export {
-    coba
+    category
 }
