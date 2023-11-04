@@ -31,10 +31,10 @@ const Navbar = () => {
             <button className="block xl:hidden cursor-pointer" onClick={() => handleSrc()}>
               <i className="ic-search tx-3" />
             </button>
-            <div className={`${displaySrc ? "flex" : "hidden"} absolute main-container items-center bg-white h-full w-full top-0 left-0`} ref={srcRef}>
+            <div className={`${displaySrc ? "flex" : "hidden"} absolute main-container items-center bg-white h-full w-full top-0 left-0 z-10`} ref={srcRef}>
               <InputField
                 icon="ic-x"
-                styles="scale-75 w-full"
+                styles="scale-90 w-full"
                 alignIcon="right"
                 click={handleSrc}
                 placeholder="Search fo products ..."

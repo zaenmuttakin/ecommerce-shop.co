@@ -18,7 +18,7 @@ const NavMenu = ({ styles="" }) => {
       {/* menu mobile */}
       <div className="block xl:hidden">
         <button className="cursor-pointer" onClick={() => handleMenu()}>
-          <i className="ic-menu tx-3 leading-normal" />
+          <i className={`${displayMenu ? "ic-x" : "ic-menu"} tx-3 leading-normal`} />
         </button>
         <ul
           className={`absolute flex flex-col gap-6 tx-2 bg-white min-w-full rounded-b top-16 px-6 py-10 left-0 border-t border-gray-10 ${displayMenu ? "block" : "hidden"}`}
