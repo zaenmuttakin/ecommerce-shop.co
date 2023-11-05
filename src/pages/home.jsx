@@ -4,7 +4,6 @@ const Homepage = () => {
     return (
         <div className="">
             <HomeLayout />
-            <Hero />
         </div>
     )
 }

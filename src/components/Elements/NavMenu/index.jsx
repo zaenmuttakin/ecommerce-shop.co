@@ -21,7 +21,7 @@ const NavMenu = ({ styles="" }) => {
           <i className={`${displayMenu ? "ic-x" : "ic-menu"} tx-3 leading-normal`} />
         </button>
         <ul
-          className={`absolute flex flex-col gap-6 tx-2 bg-white min-w-full rounded-b top-16 px-6 py-10 left-0 border-t border-gray-10 ${displayMenu ? "block" : "hidden"}`}
+          className={`absolute flex flex-col gap-6 tx-2 bg-white min-w-full rounded-b top-16 px-6 py-10 left-0 border-t border-gray-10 z-10 ${displayMenu ? "block" : "hidden"}`}
           ref={MenuRef}
         >
           {nav.map((menu, i) => {
@@ -45,7 +45,7 @@ const NavMenu = ({ styles="" }) => {
 
                     {/* submenu */}
                     <ul
-                      className={`flex flex-col gap-3 px-5 py-4 mt-5 bg-gray-10 rounded-md ${
+                      className={`flex flex-col gap-3 px-5 py-4 mt-5 bg-gray-10/80 rounded-md ${
                         displaySubMenu ? "block" : "hidden"
                       }`}
                       ref={subMenuRef}
@@ -92,7 +92,7 @@ const NavMenu = ({ styles="" }) => {
 
                   {/* submenu */}
                   <ul
-                    className={`absolute flex flex-col gap-3 p-8 top-10 left-[50%] -translate-x-[50%] bg-white rounded-md ${
+                    className={`absolute flex flex-col gap-3 p-8 top-[65px] shadow-xl backdrop-blur-sm left-[50%] -translate-x-[50%] bg-white/90 rounded-md ${
                       displaySubMenu ? "block" : "hidden"
                     }`}
                     ref={subMenuRef}

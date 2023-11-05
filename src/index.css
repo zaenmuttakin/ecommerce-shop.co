@@ -18,13 +18,13 @@
 
 @layer utilities {
   h1 {
-    @apply font-integral text-[36px] xl:text-[64px];
+    @apply font-integral leading-none text-[36px] xl:text-[64px];
   }
   h2 {
-    @apply font-integral text-[32px] xl:text-[48px];
+    @apply font-integral leading-none text-[32px] xl:text-[48px];
   }
   h3 {
-    @apply font-integral text-[32px] xl:text-[40px];
+    @apply font-integral leading-none text-[32px] xl:text-[40px];
   }
 
   .tx-1 {
