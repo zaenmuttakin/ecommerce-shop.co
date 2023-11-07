@@ -6,17 +6,50 @@
 
 @layer base {
   html {
-    @apply bg-white font-satoshi;
+    @apply bg-white font-satoshi overflow-x-hidden;
   }
 }
 
 @layer components {
   .main-container {
-    @apply container px-[16px] xl:px-0;
+    @apply container px-4 xl:px-0;
+  }
+  .full-container {
+    @apply pl-4 sm:pl-[10vh] lg:pl-[10vh] xl:pl-[10vh] 2xl:pl-[20vh]  pr-4 sm:pr-[10vh] lg:pr-[10vh] xl:pr-[10vh] 2xl:pr-[20vh]
+  }
+  .card {
+    @apply min-w-[12.5em] xl:w-[18em] flex flex-col gap-2
+  }
+  .card-image {
+    @apply relative h-56 xl:h-72 mb-2 rounded-xl overflow-hidden  cursor-pointer
+  }
+  .card-image-inner {
+    @apply object-cover object-top h-full w-full scale-100 group-hover:scale-105 smooth
+  }
+  .card-image-overlay {
+    @apply absolute flex gap-2 justify-center items-center top-[100%] left-0 w-full h-full bg-white/5 rounded-t-2xl group-hover:top-[0%] group-hover:rounded-none backdrop-blur-sm smooth
+  }
+  .card-tittle {
+    @apply tx-card font-bold capitalize cursor-pointer line-clamp-1;
+  }
+  .card-price {
+    @apply  flex gap-2
+  }
+  .price {
+    @apply  tx-3 font-bold
+  }
+  .price-discount {
+    @apply tx-3 font-bold text-black-40 line-through
+  }
+  .discount {
+    @apply tx-1 px-3 py-1.5 self-center rounded-full bg-red-10 text-red-100
   }
 }
 
 @layer utilities {
+  hr {
+    @apply border-black-10
+  }
   h1 {
     @apply font-integral leading-none text-[36px] xl:text-[64px];
   }
@@ -25,6 +58,11 @@
   }
   h3 {
     @apply font-integral leading-none text-[32px] xl:text-[40px];
+  }
+
+  /* trasnsition */
+  .smooth {
+    @apply transition-all ease-in-out duration-300
   }
 
   .tx-1 {
@@ -42,7 +80,17 @@
   .tx-5 {
     @apply font-satoshi text-[24px] xl:text-[40px];
   }
+  .tx-card {
+    @apply font-satoshi text-[16px] xl:text-[20px];
+  }
   .link {
     @apply hover:underline hover:underline-offset-8;
+  }
+  .hide-scroll-bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
   }
 }
