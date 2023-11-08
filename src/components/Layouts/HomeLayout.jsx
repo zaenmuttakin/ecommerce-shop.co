@@ -6,9 +6,11 @@ import ProductsPanel from "../Fragments/ProductsPanel";
 import { heroData } from "../../constants/pagesData";
 import { products } from "../../constants/productData";
 import Ln from "../Elements/Line";
+import StylePanel from "../Fragments/StylePanel";
+import { Fragment } from "react";
 const HomeLayout = () => {
   return (
-    <div className="">
+    <Fragment>
       <Navbar />
       <Hero
         tittle={heroData.tittle}
@@ -22,7 +24,8 @@ const HomeLayout = () => {
         <Ln />
         <ProductsPanel tittle="top selling" productList={products} />
       </section>
-    </div>
+      <StylePanel />
+    </Fragment>
   );
 };
 

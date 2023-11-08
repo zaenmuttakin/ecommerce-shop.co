@@ -15,9 +15,21 @@ const brandsImage = [
     calvinKlein
 ]
 
+// styles panel
+import casual from "./styles/casual.png"
+import formal from "./styles/formal.png"
+import party from "./styles/party.png"
+import gym from "./styles/gym.png"
+const stylesBg = {
+    casual,
+    formal,
+    party,
+    gym
+}
 
 export {
     logoImage,
     heroImage,
     brandsImage,
+    stylesBg
 }

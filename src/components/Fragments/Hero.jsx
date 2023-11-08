@@ -24,7 +24,7 @@ const Hero = ({tittle, text, stats, img}) => {
             ))}
           </div>
         </div>
-        <div className="flex-1 bg-red-10 self-end overflow-hidden">
+        <div className="flex-1 self-end overflow-hidden">
           <img src={img} alt="hero" className="w-full"/>
         </div>
       </div>
