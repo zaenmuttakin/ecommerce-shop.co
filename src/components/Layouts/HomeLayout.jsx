@@ -1,13 +1,14 @@
+import { Fragment } from "react";
 import Navbar from "../Fragments/Navbar";
 import Hero from "../Fragments/Hero";
 import Brands from "../Fragments/Brands";
 import ProductsPanel from "../Fragments/ProductsPanel";
+import StylePanel from "../Fragments/StylePanel";
+import Panel from "../Fragments/CustomerPanel";
 
 import { heroData } from "../../constants/pagesData";
 import { products } from "../../constants/productData";
 import Ln from "../Elements/Line";
-import StylePanel from "../Fragments/StylePanel";
-import { Fragment } from "react";
 const HomeLayout = () => {
   return (
     <Fragment>
@@ -25,6 +26,7 @@ const HomeLayout = () => {
         <ProductsPanel tittle="top selling" productList={products} />
       </section>
       <StylePanel />
+      <Panel/>
     </Fragment>
   );
 };
