@@ -27,9 +27,24 @@ const stylesBg = {
     gym
 }
 
+// payments
+import visa from "./payments/visa.svg"
+import paypal from "./payments/paypal.svg"
+import mastercard from "./payments/mastercard.svg"
+import googlePay from "./payments/google-pay.svg"
+import applePay from "./payments/apple-pay.svg"
+const paymentsImg = {
+    visa,
+    paypal,
+    mastercard,
+    googlePay,
+    applePay
+}
+
 export {
     logoImage,
     heroImage,
     brandsImage,
-    stylesBg
+    stylesBg,
+    paymentsImg,
 }

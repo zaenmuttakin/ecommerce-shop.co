@@ -4,7 +4,8 @@ import Hero from "../Fragments/Hero";
 import Brands from "../Fragments/Brands";
 import ProductsPanel from "../Fragments/ProductsPanel";
 import StylePanel from "../Fragments/StylePanel";
-import Panel from "../Fragments/CustomerPanel";
+import CustPanel from "../Fragments/CustomerPanel";
+import Footer from "../Fragments/Footer";
 
 import { heroData } from "../../constants/pagesData";
 import { products } from "../../constants/productData";
@@ -26,7 +27,8 @@ const HomeLayout = () => {
         <ProductsPanel tittle="top selling" productList={products} />
       </section>
       <StylePanel />
-      <Panel/>
+      <CustPanel />
+      <Footer />
     </Fragment>
   );
 };

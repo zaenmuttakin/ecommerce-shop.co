@@ -1,4 +1,4 @@
-import { heroImage } from "../assets/images"
+import { heroImage, paymentsImg } from "../assets/images"
 import { category } from "./productData"
 const nav = [
     {
@@ -30,7 +30,91 @@ const heroData = {
     ]
 }
 
+const socialLinks = [
+    {
+        name: "twitter",
+        icon: "ic-twitter",
+    },
+    {
+        name: "facebook",
+        icon: "ic-facebook",
+    },
+    {
+        name: "instagram",
+        icon: "ic-instagram",
+    },
+    {
+        name: "github",
+        icon: "ic-github",
+    },
+]
+
+const footerNav = [
+    {
+        name: "Company",
+        subMenus: [
+            { name: "About" },
+            { name: "Features" },
+            { name: "Works" },
+            { name: "Career" },
+        ]
+    },
+    {
+        name: "Help",
+        subMenus: [
+            { name: "Customer Support" },
+            { name: "Delivery Details" },
+            { name: "Terms & Conditions" },
+            { name: "Privacy Policy" },
+        ]
+    },
+    {
+        name: "Faq",
+        subMenus: [
+            { name: "Account" },
+            { name: "Manage Deliveries" },
+            { name: "Orders" },
+            { name: "Payments" },
+        ]
+    },
+    {
+        name: "Resources",
+        subMenus: [
+            { name: "Free eBooks" },
+            { name: "Development Tutorials" },
+            { name: "How To - Blog" },
+            { name: "Youtube Playlist" },
+        ]
+    },
+]
+
+const payments = [
+    {
+        name: "visa",
+        img: paymentsImg.visa,
+    },
+    {
+        name: "mastercard",
+        img: paymentsImg.mastercard,
+    },
+    {
+        name: "paypal",
+        img: paymentsImg.paypal,
+    },
+    {
+        name: "apple pay",
+        img: paymentsImg.applePay,
+    },
+    {
+        name: "google pay",
+        img: paymentsImg.googlePay,
+    },
+]
+
 export {
     nav,
-    heroData
+    heroData,
+    socialLinks,
+    footerNav,
+    payments,
 }

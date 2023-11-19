@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import StarRating from "../Elements/StarRating";
 import { happyCust } from "../../constants/productData";
 const arr = happyCust;
-const Panel = () => {
+const CustPanel = () => {
   let [scrollX, setscrollX] = useState(0);
   const view = () => {
     const xl = window.matchMedia("(min-width: 1280px)");
@@ -50,7 +50,7 @@ const Panel = () => {
           if (Math.abs(scrollX) <= i && i < view() + Math.abs(scrollX)) {
             return (
               <motion.div
-                key={c}
+                key={i}
                 className={styles}
                 initial={{
                   x: 0,
@@ -77,7 +77,7 @@ const Panel = () => {
           } else {
             return (
               <motion.div
-                key={c}
+                key={i}
                 className={styles}
                 initial={{
                   x: 0,
@@ -111,4 +111,4 @@ const Panel = () => {
   );
 };
 
-export default Panel;
+export default CustPanel;

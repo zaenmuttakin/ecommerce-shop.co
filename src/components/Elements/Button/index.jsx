@@ -4,18 +4,22 @@ const Button = ({ type = "primary", label = "button", styles, icon }) => {
   switch (type) {
     case "primary":
       styleBtn =
-        " bg-black-100 hover:bg-black-100/0 hover:outline hover:outline-2";
+        " bg-black-100 hover:bg-black-100/0 hover:outline hover:outline-2 pr-12 hover:pr-14 pl-12 py-4";
       styleLabel = "text-white group-hover:text-black-100";
       break;
     case "secondary":
-      styleBtn = "bg-black-trasparent outline outline-2 outline-black-10";
+      styleBtn = "bg-black-trasparent outline outline-2 outline-black-10 pr-12 hover:pr-14 pl-12 py-4";
+      styleLabel = "text-black-100";
+      break;
+    case "white":
+      styleBtn = "bg-gray-20 outline outline-2 outline-black-10 pr-12 hover:pr-14 pl-12 py-3";
       styleLabel = "text-black-100";
       break;
   }
 
   return (
     <button
-      className={`group relative flex justify-center gap-2 rounded-full pr-12 hover:pr-14 pl-12 py-4  overflow-hidden transition-all ease-in -z-0 ${styleBtn} ${styles}
+      className={`group relative flex justify-center gap-2 rounded-full overflow-hidden transition-all ease-in -z-0 ${styleBtn} ${styles}
        `}
     >
       <a href="#" className={`tx-2 font-medium capitalize ${styleLabel}`}>
