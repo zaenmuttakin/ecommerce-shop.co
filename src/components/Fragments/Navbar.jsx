@@ -14,7 +14,7 @@ const Navbar = () => {
     <Fragment>
       <Notification />
       <nav className="main-container relative flex justify-between items-center gap-2 py-4 xl:gap-20 xl:py-6">
-        <div className="flex items-center gap-0 xl:gap-20">
+        <div className="flex items-center gap-5 xl:gap-20">
           <Logo styles="order-2 xl:order-1" />
           <NavMenu styles={"order-1 xl:order-2"} />
         </div>
