@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Usd } from "../Curency";
 import StarRating from "../StarRating";
 
@@ -11,14 +12,14 @@ const CardProduct = ({product}) => {
           className="card-image-inner"
         />
         <div className="card-image-overlay">
-          <a href="#" className="-rotate-45">
+          <Link to="detail" className="-rotate-45">
             <i className="ic-arrow tx-5 text-white hover:text-black-100" />
-          </a>
+          </Link>
         </div>
       </div>
-      <a href="#" className="card-tittle">
+      <Link to="detail" className="card-tittle">
         {product.name}
-      </a>
+      </Link>
       <div className="card-rate flex gap-2 items-center">
         <StarRating rating={product.rating} />
         <div className="rate">

@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 import { logoImage } from "../../../assets/images";
 
-const Logo = ({styles}) => {
+const Logo = ({ styles }) => {
   return (
-    <a href="#" className={`scale-75 xl:scale-100 origin-left ${styles}`}>
+    <Link to="/ecommerce-shop.co/">
+    <div className={`scale-75 xl:scale-100 origin-left cursor-pointer ${styles}`}>
       <img src={logoImage} alt="logo" />
-    </a>
+    </div>
+    </Link>
   );
 };
 
