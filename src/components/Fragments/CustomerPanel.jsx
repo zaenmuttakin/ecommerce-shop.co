@@ -15,7 +15,7 @@ const CustPanel = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8 py-10">
+    <div className="flex flex-col gap-8">
       <div className="main-container flex gap-2 justify-between items-end">
         <h2>OUR HAPPY CUSTOMERS</h2>
         <div className="flex gap-3">

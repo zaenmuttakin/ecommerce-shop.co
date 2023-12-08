@@ -9,6 +9,8 @@ import { heroData } from "../../constants/pagesData";
 import { products } from "../../constants/productData";
 import Ln from "../Elements/Line";
 const HomeLayout = () => {
+  const productSlices = products.slice(0, 5);
+  const productSlices2 = products.slice(6, 11);
   return (
     <Fragment>
       <Hero
@@ -19,9 +21,9 @@ const HomeLayout = () => {
       />
       <Brands />
       <section className="py-2">
-        <ProductsPanel tittle="new arrivals" productList={products} />
+        <ProductsPanel tittle="new arrivals" productList={productSlices} />
         <Ln />
-        <ProductsPanel tittle="top selling" productList={products} />
+        <ProductsPanel tittle="top selling" productList={productSlices2} />
       </section>
       <StylePanel />
       <CustPanel />

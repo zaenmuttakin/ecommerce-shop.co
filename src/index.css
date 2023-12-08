@@ -12,43 +12,83 @@
 
 @layer components {
   .main-container {
-    @apply container px-4 xl:px-0;
-  }
-  .full-container {
-    @apply pl-4 sm:pl-[10vh] lg:pl-[10vh] xl:pl-[10vh] 2xl:pl-[20vh]  pr-4 sm:pr-[10vh] lg:pr-[10vh] xl:pr-[10vh] 2xl:pr-[20vh]
+    @apply container px-5;
   }
   .card {
-    @apply min-w-[12.5em] xl:w-[18em] flex flex-col gap-2
+    @apply flex-1 flex flex-col gap-2;
   }
   .card-image {
-    @apply relative h-56 xl:h-72 mb-2 rounded-xl overflow-hidden  cursor-pointer
+    @apply relative mb-2 h-56 xl:h-auto rounded-xl overflow-hidden cursor-pointer aspect-square;
   }
   .card-image-inner {
-    @apply object-cover object-top h-full w-full scale-100 group-hover:scale-105 smooth
+    @apply object-cover object-top h-full w-full scale-100 group-hover:scale-105 smooth;
   }
   .card-image-overlay {
-    @apply absolute flex gap-2 justify-center items-center top-[100%] left-0 w-full h-full bg-white/5 rounded-t-2xl group-hover:top-[0%] group-hover:rounded-none backdrop-blur-sm smooth
+    @apply absolute flex gap-2 justify-center items-center top-[100%] left-0 w-full h-full bg-white/5 rounded-t-2xl group-hover:top-[0%] group-hover:rounded-none backdrop-blur-sm smooth;
   }
   .card-tittle {
     @apply tx-card font-bold capitalize cursor-pointer line-clamp-1;
   }
   .card-price {
-    @apply  flex gap-2
+    @apply flex gap-2;
   }
   .price {
-    @apply  tx-3 font-bold
+    @apply tx-3 font-bold;
   }
   .price-discount {
-    @apply tx-3 font-bold text-black-40 line-through
+    @apply tx-3 font-bold text-black-40 line-through;
   }
   .discount {
-    @apply tx-1 px-3 py-1.5 self-center rounded-full bg-red-10 text-red-100
+    @apply tx-1 px-3 py-1.5 self-center rounded-full bg-red-10 text-red-100;
+  }
+  .filter-container {
+    @apply w-full h-screen fixed pt-16 bg-black-40 xl:w-max xl:h-auto xl:relative xl:p-0 xl:bg-white top-0 left-0 z-20;
+  }
+  .filter-section {
+    @apply h-full w-full xl:h-fit md:w-2/3 xl:w-full inset-x-0 mx-auto border bg-white border-black-10 rounded-2xl p-6 pb-32 xl:pb-4 overflow-y-scroll hide-scroll-bar;
+  }
+  .filter-btn {
+    @apply pt-6 pb-4 px-4 xl:relative z-30 bottom-0 left-0 right-0 w-full md:w-2/3 xl:w-full mx-auto bg-white fixed;
+  }
+  .multi-range {
+    @apply relative h-6 mt-5 mb-10;
+  }
+  .multi-range span {
+    @apply relative tx-2;
+  }
+  .multi-range input[type="range"] {
+    @apply absolute w-full h-full box-border appearance-none overflow-hidden pointer-events-none z-10;
+    background: none;
+  }
+  .multi-range .track {
+    @apply absolute my-auto inset-y-0 w-full h-1.5 rounded-lg z-0;
+  }
+  .multi-range input[type="range"]::-webkit-slider-thumb {
+    @apply relative w-4 h-4 rounded-full appearance-none pointer-events-auto bg-black-100 cursor-pointer;
+  }
+  .multi-range input[type="range"]:nth-child(2) {
+    background: none;
+  }
+  .multi-range output {
+    @apply absolute top-full tx-2 font-bold;
+  }
+  .paginate {
+    @apply flex justify-between;
+  }
+  .paginate-btn {
+    @apply flex items-center gap-2 border border-black-10 text-black-100 rounded-xl px-4 py-3 max-w-min cursor-pointer  hover:bg-black-100 hover:text-white overflow-hidden smooth;
+  }
+  .paginate-num-page {
+    @apply flex items-center justify-center text-black-100 tx-2 text-center;
+  }
+  .paginate-num {
+    @apply rounded-xl hover:bg-black-10 w-12 py-3 cursor-pointer smooth;
   }
 }
 
 @layer utilities {
   hr {
-    @apply border-black-10
+    @apply border-black-10;
   }
   h1 {
     @apply font-integral leading-none text-[36px] xl:text-[64px];
@@ -62,7 +102,7 @@
 
   /* trasnsition */
   .smooth {
-    @apply transition-all ease-in-out duration-300
+    @apply transition-all ease-in-out duration-300;
   }
 
   .tx-1 {

@@ -3,11 +3,13 @@ import { logoImage } from "../../../assets/images";
 
 const Logo = ({ styles }) => {
   return (
-    <Link to="/ecommerce-shop.co/">
-    <div className={`scale-75 xl:scale-100 origin-left cursor-pointer ${styles}`}>
-      <img src={logoImage} alt="logo" />
+    <div
+      className={`scale-75 xl:scale-100 origin-left cursor-pointer ${styles}`}
+    >
+      <Link to="/ecommerce-shop.co/">
+        <img src={logoImage} alt="logo" />
+      </Link>
     </div>
-    </Link>
   );
 };
 

@@ -6,7 +6,7 @@ import Logo from "../Elements/Logo";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gray-20 mt-36">
+    <footer className="relative bg-gray-20 mt-52">
       <div className="main-container absolute -translate-y-[50%] inset-x-0">
         <div className="flex flex-col xl:flex-row gap-8 bg-black-100 px-6 py-8 xl:px-16 xl:py-10 rounded-2xl justify-between  ">
           <h2 className="text-white w-full xl:w-1/2">

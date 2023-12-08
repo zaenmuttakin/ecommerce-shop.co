@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { nav } from "../../../constants/pagesData";
+import DropList from "../DropList/DropList";
 
 const NavMenu = ({ styles="" }) => {
   const MenuRef = useRef(null);
@@ -21,7 +22,7 @@ const NavMenu = ({ styles="" }) => {
           <i className={`${displayMenu ? "ic-x" : "ic-menu"} tx-3 leading-normal`} />
         </button>
         <ul
-          className={`absolute flex flex-col gap-6 tx-2 bg-white min-w-full rounded-b top-16 px-6 py-10 left-0 border-t border-gray-10 z-10 ${displayMenu ? "block" : "hidden"}`}
+          className={`absolute flex flex-col gap-6 tx-2 bg-white min-w-full rounded-b top-full px-6 py-10 left-0 border-t border-gray-10 z-20 ${displayMenu ? "block" : "hidden"}`}
           ref={MenuRef}
         >
           {nav.map((menu, i) => {
@@ -91,20 +92,7 @@ const NavMenu = ({ styles="" }) => {
                   />
 
                   {/* submenu */}
-                  <ul
-                    className={`absolute flex flex-col gap-3 p-8 top-[65px] shadow-xl backdrop-blur-sm left-[50%] -translate-x-[50%] bg-white/90 rounded-md ${
-                      displaySubMenu ? "block" : "hidden"
-                    }`}
-                    ref={subMenuRef}
-                  >
-                    {menu.subMenus.map((submenu, i) => (
-                      <li key={i}>
-                        <a href="#" className="link">
-                          {submenu}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                  <DropList list={menu.subMenus} isOpen={displaySubMenu} styles={"tx-2"} />
                 </div>
               )}
               {!menu.subMenus && (

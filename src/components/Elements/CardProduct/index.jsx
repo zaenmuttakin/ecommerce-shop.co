@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Usd } from "../Curency";
 import StarRating from "../StarRating";
 
-const CardProduct = ({product}) => {
+const CardProduct = ({ product }) => {
   return (
     <div className="card">
       <div className="card-image group">
@@ -12,22 +12,23 @@ const CardProduct = ({product}) => {
           className="card-image-inner"
         />
         <div className="card-image-overlay">
-          <Link to="detail" className="-rotate-45">
+          <Link to={`/ecommerce-shop.co/${product.id}`} className="-rotate-45">
             <i className="ic-arrow tx-5 text-white hover:text-black-100" />
           </Link>
         </div>
       </div>
-      <Link to="detail" className="card-tittle">
+      <Link to={`/ecommerce-shop.co/${product.id}`} className="card-tittle">
         {product.name}
       </Link>
-      <div className="card-rate flex gap-2 items-center">
-        <StarRating rating={product.rating} />
-        <div className="rate">
+      <div className="card-rate flex gap-5 items-center">
+        <div className="rate flex gap-2">
+          <StarRating rating={product.rating} />
           <p className="tx-1">
             {product.rating}/<span className="text-black-60">5</span>
           </p>
         </div>
       </div>
+
       <div className="card-price">
         {product.discount && (
           <>

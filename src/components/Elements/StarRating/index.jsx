@@ -1,10 +1,10 @@
-const StarRating = ({ rating = 4.5 }) => {
+const StarRating = ({ rating = 4.5, styles }) => {
   let counts = [];
   for (let i = 0; i < Math.floor(rating); i++) {
     counts.push(i);
   }
   return (
-    <div>
+    <div className={styles}>
       {counts.map((c) => (
         <i className="ic-star text-yellow" key={c} />
       ))}
