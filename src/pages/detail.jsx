@@ -8,6 +8,9 @@ import CardProduct from "../components/Elements/CardProduct";
 import SizeName from "../components/Elements/SizeName";
 import { useParams } from "react-router-dom";
 import DropList from "../components/Elements/DropList/DropList";
+import Budge from "../components/Elements/Budge/Budge";
+import useDatacart from "../hook/useDatacart";
+import { useCartItems } from "../hooks/globalState/useCartItems";
 
 // tabs content ↘↘↘
 const TabProduct = () => {
@@ -159,16 +162,6 @@ const tabs = [
   },
 ];
 
-const Budge = () => {
-  return (
-    <div className="flex gap-2 py-6 items-center text-black-60">
-      <p className="tx-1 capitalize">home</p>
-      <i className="ic-chevron -rotate-90" />
-      <p className="tx-1 capitalize">detail</p>
-    </div>
-  );
-};
-
 const Images = ({ variant }) => {
   const [imgShow, setImgShow] = useState(0);
 
@@ -216,14 +209,21 @@ const DetailPage = () => {
   const [size, setSize] = useState(theproduct.size[2]);
   const [qty, setQty] = useState(1);
 
+  const dataCart = useDatacart(id, theproduct, variant, size, qty)
+
   const productSlices = products.slice(0, 5);
+
+  const addToCart = useCartItems((state) => state.addToCart);
+  const cartItems = useCartItems((state) => state.cartItems);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setTheProduct(products.find((p) => p.id == id));
     setVariant(theproduct.variant[0]);
   }, [id, theproduct]);
-  
+
+ 
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [variant]);
@@ -235,7 +235,7 @@ const DetailPage = () => {
     >
       <section className="main-container">
         <hr />
-        <Budge />
+        <Budge thisPage={"detail"} />
         <div className="flex gap-4 gap-y-8 xl:gap-8 flex-col xl:flex-row justify-center">
           <Images variant={variant} />
           <div className="details flex-1">
@@ -282,7 +282,7 @@ const DetailPage = () => {
                       className={`h-10 w-10 rounded-full flex items-center justify-center ${
                         vr === variant && "outline"
                       } hover:outline outline-black-20 overflow-hidden cursor-pointer`}
-                      style={{ backgroundColor: vr.color }}
+                      style={{ backgroundColor: vr.color.hex }}
                     >
                       {vr === variant && (
                         <motion.i
@@ -335,7 +335,7 @@ const DetailPage = () => {
                   label="add to cart"
                   styles="max-w-full flex-1"
                   icon="ic-cart"
-                  to="/ecommerce-shop.co/detail"
+                  onClk={() => addToCart(dataCart)}
                 />
               </div>
             </div>

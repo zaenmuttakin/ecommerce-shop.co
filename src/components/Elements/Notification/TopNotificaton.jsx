@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-const Notification = () => {
+const TopNotification = () => {
   const notifRef = useRef(null);
   const [displayNotif, setDisplayNotif] = useState(true);
 
@@ -38,4 +38,4 @@ const Notification = () => {
   );
 };
 
-export default Notification;
+export default TopNotification;

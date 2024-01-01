@@ -84,6 +84,12 @@
   .paginate-num {
     @apply rounded-xl hover:bg-black-10 w-12 py-3 cursor-pointer smooth;
   }
+  .cart-badge {
+    @apply absolute -top-2 -right-3 bg-red-100 w-5 aspect-square rounded-full text-white text-[10px] font-satoshi text-center py-0.5
+  }
+  .alert {
+    @apply absolute flex items-center gap-5 p-5 border border-l-4 border-black-10 border-l-green shadow-lg rounded top-36 right-10 z-10 bg-white/50 backdrop-blur-sm
+  }
 }
 
 @layer utilities {

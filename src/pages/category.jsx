@@ -12,16 +12,8 @@ import { AnimatePresence, easeOut, motion } from "framer-motion";
 import DropList from "../components/Elements/DropList/DropList";
 import MultiRange from "../components/Elements/MultiRange/MultiRange";
 import Paginate from "../components/Elements/Paginate/Paginate";
+import Budge from "../components/Elements/Budge/Budge";
 
-const Budge = () => {
-  return (
-    <div className="flex gap-2 py-6 items-center text-black-60">
-      <p className="tx-1 capitalize">home</p>
-      <i className="ic-chevron -rotate-90" />
-      <p className="tx-1 capitalize">category</p>
-    </div>
-  );
-};
 const FilterSection = ({ handleShowFilter }) => {
   const size = ["s", "m", "l", "xl"];
   const [priceIsOpen, setPriceIsOpen] = useState(true);
@@ -130,17 +122,17 @@ const FilterSection = ({ handleShowFilter }) => {
                 {Object.keys(colorVariant).map((c, i) => (
                   <div
                     className={`w-10 flex justify-center items-center aspect-square rounded-full overflow-hidden cursor-pointer ${
-                      colorSelected === colorVariant[c] &&
+                      colorSelected === colorVariant[c].hex &&
                       "outline outline-black-10"
                     }`}
-                    style={{ backgroundColor: colorVariant[c] }}
-                    onClick={() => setColorSelected(colorVariant[c])}
+                    style={{ backgroundColor: colorVariant[c].hex }}
+                    onClick={() => setColorSelected(colorVariant[c].hex)}
                     key={i}
                   >
-                    {colorSelected === colorVariant[c] && (
+                    {colorSelected === colorVariant[c].hex && (
                       <motion.i
                         className={`tx-3 ic-checklist ${
-                          colorVariant[c] == "#F7F7F4"
+                          colorVariant[c].hex == "#F7F7F4"
                             ? "text-black-60"
                             : "text-white"
                         }`}
@@ -331,7 +323,7 @@ const CategoryPage = () => {
   return (
     <section className="main-container">
       <hr />
-      <Budge />
+      <Budge thisPage={"category"} />
       <div className="flex gap-5">
         <AnimatePresence>
           {showFilter && (

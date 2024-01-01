@@ -14,13 +14,47 @@ const dreesStyle = [
 ]
 
 const colorVariant = {
-    white: "#F7F7F4",
-    black: "#000000",
-    green: "#13716B",
-    grey: "#CAC8CB",
-    blue: "#769CC4",
-    pink: "#FCC7EB",
-    red: "#C52E2E",
+
+    white: {
+        id: 1,
+        name: "white",
+        hex: "#F7F7F4"
+    },
+    black: {
+        id: 2,
+        name: "black",
+        hex: "#000000"
+    },
+    green: {
+        id: 3,
+        name: "green",
+        hex: "#13716B"
+    },
+    grey: {
+        id: 4,
+        name: "grey",
+        hex: "#CAC8CB"
+    },
+    blue: {
+        id: 5,
+        name: "blue",
+        hex: "#769CC4"
+    },
+    pink: {
+        id: 6,
+        name: "pink",
+        hex: "#FCC7EB"
+    },
+    red: {
+        id: 7,
+        name: "red",
+        hex: "#C52E2E"
+    },
+    brown: {
+        id: 8,
+        name: "brown",
+        hex: "#824F2D"
+    }
 
 }
 
@@ -116,11 +150,11 @@ const products = [
                 ]
             },
             {
-                color: colorVariant.green,
+                color: colorVariant.brown,
                 image: [
-                    "https://stingshop.com/cdn/shop/products/SG0017C463FZ1_jpg_800x.jpg?v=1654841858",
-                    "https://stingshop.com/cdn/shop/products/SG0017C463FZ_jpg.jpg?v=1654841857",
-                    "https://images.asos-media.com/products/asos-design-stretch-slim-fit-check-shirt-in-green/22426839-4?$n_640w$&wid=513&fit=constrain",
+                    "https://i5.walmartimages.com/seo/One-Day-Away-Men-s-Long-Sleeve-Brushed-Flannel-Shirt_d1a46179-3cbd-4b74-ad13-978b6c2d5ede_1.6bd81a4343b9bb9f961521a3c6bd4a19.jpeg",
+                    "https://i5.walmartimages.com/asr/96532b31-85d7-4289-98e8-c213232d0a07_1.2c8c05076844a6e08300d6b7dd83530e.jpeg",
+                    "https://i5.walmartimages.com/asr/8b84674b-50c3-4302-919e-967603b0b295_1.9f9c622258f89c1a9d164a1d070e494e.jpeg",
                 ]
             }
         ]
@@ -264,11 +298,11 @@ const products = [
                 ]
             },
             {
-                color: colorVariant.green,
+                color: colorVariant.brown,
                 image: [
-                    "https://stingshop.com/cdn/shop/products/SG0017C463FZ1_jpg_800x.jpg?v=1654841858",
-                    "https://stingshop.com/cdn/shop/products/SG0017C463FZ_jpg.jpg?v=1654841857",
-                    "https://images.asos-media.com/products/asos-design-stretch-slim-fit-check-shirt-in-green/22426839-4?$n_640w$&wid=513&fit=constrain",
+                    "https://i5.walmartimages.com/seo/One-Day-Away-Men-s-Long-Sleeve-Brushed-Flannel-Shirt_d1a46179-3cbd-4b74-ad13-978b6c2d5ede_1.6bd81a4343b9bb9f961521a3c6bd4a19.jpeg",
+                    "https://i5.walmartimages.com/asr/96532b31-85d7-4289-98e8-c213232d0a07_1.2c8c05076844a6e08300d6b7dd83530e.jpeg",
+                    "https://i5.walmartimages.com/asr/8b84674b-50c3-4302-919e-967603b0b295_1.9f9c622258f89c1a9d164a1d070e494e.jpeg",
                 ]
             }
         ]
@@ -412,11 +446,11 @@ const products = [
                 ]
             },
             {
-                color: colorVariant.green,
+                color: colorVariant.brown,
                 image: [
-                    "https://stingshop.com/cdn/shop/products/SG0017C463FZ1_jpg_800x.jpg?v=1654841858",
-                    "https://stingshop.com/cdn/shop/products/SG0017C463FZ_jpg.jpg?v=1654841857",
-                    "https://images.asos-media.com/products/asos-design-stretch-slim-fit-check-shirt-in-green/22426839-4?$n_640w$&wid=513&fit=constrain",
+                    "https://i5.walmartimages.com/seo/One-Day-Away-Men-s-Long-Sleeve-Brushed-Flannel-Shirt_d1a46179-3cbd-4b74-ad13-978b6c2d5ede_1.6bd81a4343b9bb9f961521a3c6bd4a19.jpeg",
+                    "https://i5.walmartimages.com/asr/96532b31-85d7-4289-98e8-c213232d0a07_1.2c8c05076844a6e08300d6b7dd83530e.jpeg",
+                    "https://i5.walmartimages.com/asr/8b84674b-50c3-4302-919e-967603b0b295_1.9f9c622258f89c1a9d164a1d070e494e.jpeg",
                 ]
             }
         ]
@@ -560,11 +594,11 @@ const products = [
                 ]
             },
             {
-                color: colorVariant.green,
+                color: colorVariant.brown,
                 image: [
-                    "https://stingshop.com/cdn/shop/products/SG0017C463FZ1_jpg_800x.jpg?v=1654841858",
-                    "https://stingshop.com/cdn/shop/products/SG0017C463FZ_jpg.jpg?v=1654841857",
-                    "https://images.asos-media.com/products/asos-design-stretch-slim-fit-check-shirt-in-green/22426839-4?$n_640w$&wid=513&fit=constrain",
+                    "https://i5.walmartimages.com/seo/One-Day-Away-Men-s-Long-Sleeve-Brushed-Flannel-Shirt_d1a46179-3cbd-4b74-ad13-978b6c2d5ede_1.6bd81a4343b9bb9f961521a3c6bd4a19.jpeg",
+                    "https://i5.walmartimages.com/asr/96532b31-85d7-4289-98e8-c213232d0a07_1.2c8c05076844a6e08300d6b7dd83530e.jpeg",
+                    "https://i5.walmartimages.com/asr/8b84674b-50c3-4302-919e-967603b0b295_1.9f9c622258f89c1a9d164a1d070e494e.jpeg",
                 ]
             }
         ]
@@ -617,41 +651,6 @@ const products = [
             },
         ]
     },
-    // {
-    //     name: "",
-    //     category: "",
-    //     description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-    //     price: 0,
-    //     discount: null,
-    //     rating: 0,
-    //     size : ["s", "m", "l", "xl"],
-    //     variant: [
-    //         {
-    //             color: "",
-    //             image: [
-    //                 "",
-    //                 "",
-    //                 "",
-    //             ]
-    //         },
-    //         {
-    //             color: "",
-    //             image: [
-    //                 "",
-    //                 "",
-    //                 "",
-    //             ]
-    //         },
-    //         {
-    //             color: "",
-    //             image: [
-    //                 "",
-    //                 "",
-    //                 "",
-    //             ]
-    //         }
-    //     ]
-    // },
 ]
 
 const happyCust = [

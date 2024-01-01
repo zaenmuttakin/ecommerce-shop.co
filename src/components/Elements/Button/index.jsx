@@ -18,6 +18,11 @@ const Button = ({
         " bg-black-100 hover:bg-black-100/0 hover:outline hover:outline-2 pr-12 hover:pr-14 pl-12 py-4";
       styleLabel = "tx-2 text-white group-hover:text-black-100";
       break;
+    case "primary-md":
+      styleBtn =
+        " bg-black-100 hover:bg-black-100/0 hover:outline hover:outline-2 pr-10 hover:pr-12 pl-10 py-2";
+      styleLabel = "tx-2 text-white group-hover:text-black-100";
+      break;
     case "secondary":
       styleBtn =
         "bg-black-trasparent outline outline-2 outline-black-10 pr-12 hover:pr-14 pl-12 py-4";
