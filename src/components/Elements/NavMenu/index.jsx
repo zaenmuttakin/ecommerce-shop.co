@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { nav } from "../../../constants/pagesData";
 import DropList from "../DropList/DropList";
+import { Link } from "react-router-dom";
 
 const NavMenu = ({ styles="" }) => {
   const MenuRef = useRef(null);
@@ -34,9 +35,9 @@ const NavMenu = ({ styles="" }) => {
                       className="flex gap-2 "
                       onClick={() => handleSubMenu()}
                     >
-                      <a href="#" className="link">
+                      <Link to="/ecommerce-shop.co/category" className="link">
                         {menu.name}
-                      </a>
+                      </Link>
                       <i
                         className={`ic-chevron tx-3  ${
                           displaySubMenu ? "rotate-180" : "rotate-0"
@@ -53,18 +54,18 @@ const NavMenu = ({ styles="" }) => {
                     >
                       {menu.subMenus.map((submenu, i) => (
                         <li key={i}>
-                          <a href="#" className="link">
+                          <Link to="/ecommerce-shop.co/category" className="link">
                             {submenu}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
                   </div>
                 )}
                 {!menu.subMenus && (
-                  <a href="#" className="link">
+                  <Link to="/ecommerce-shop.co/category" className="link">
                     {menu.name}
-                  </a>
+                  </Link>
                 )}
               </li>
             );
@@ -82,9 +83,9 @@ const NavMenu = ({ styles="" }) => {
                   className="flex gap-2 cursor-pointer"
                   onClick={() => handleSubMenu()}
                 >
-                  <a href="#" className="link">
+                  <Link to="/ecommerce-shop.co/category" className="link">
                     {menu.name}
-                  </a>
+                  </Link>
                   <i
                     className={`ic-chevron tx-3  ${
                       displaySubMenu ? "rotate-180" : "rotate-0"
@@ -96,9 +97,9 @@ const NavMenu = ({ styles="" }) => {
                 </div>
               )}
               {!menu.subMenus && (
-                <a href="#" className="link">
+                <Link to="/ecommerce-shop.co/category" className="link">
                   {menu.name}
-                </a>
+                </Link>
               )}
             </li>
           );

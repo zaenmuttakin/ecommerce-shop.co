@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const DropList = ({ list, isOpen, styles }) => {
   return (
@@ -13,7 +14,7 @@ const DropList = ({ list, isOpen, styles }) => {
         >
           {list.map((item, i) => (
             <li key={i} className="cursor-pointer py-2 px-6 rounded-md hover:bg-black-100/5">
-              {item}
+             <Link to="/ecommerce-shop.co/category">{item}</Link> 
             </li>
           ))}
         </motion.ul>

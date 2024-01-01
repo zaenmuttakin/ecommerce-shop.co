@@ -16,6 +16,7 @@ const ProductsPanel = ({ tittle, productList }) => {
           label="view all"
           styles="min-w-full xl:min-w-fit"
           icon="ic-arrow"
+          to="/ecommerce-shop.co/category"
         />
       </div>
     </section>
