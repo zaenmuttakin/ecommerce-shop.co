@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom"
 import Button from "../components/Elements/Button"
-
 
 const ErrorPage = () => {
   return (
     <div className="flex flex-col gap-12 items-center justify-center h-[100vh]">
-        <h2>Page Not Found!</h2>
+        <h2 className=" leading-3">sorry 😢</h2>
+        <p className="tx-5 capitalize leading-3 xl:leading-normal mb-5">This page not yet available</p>
         <Button
             type="primary"
             label="go back"

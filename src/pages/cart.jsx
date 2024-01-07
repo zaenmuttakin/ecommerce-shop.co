@@ -3,7 +3,7 @@ import SizeName from "../components/Elements/SizeName";
 import { Usd } from "../components/Elements/Curency";
 import Button from "../components/Elements/Button";
 import InputField from "../components/Elements/InputField/InputField";
-import { useCartItems } from "../hooks/globalState/useCartItems";
+import { useGlobalState } from "../hooks/globalState/useGlobalState";
 
 const ProductList = ({data}) => {
   const {cartItems, setCart} = data;
@@ -74,9 +74,9 @@ const ProductList = ({data}) => {
 const OrderSummary = ({data}) => {
   const subtotalBeforeDiscount = data.reduce((acc, val) => acc + val.price * val.qty, 0);
   const subtotalAfterDiscount = data.reduce((acc, val) => acc + (100-val.discount)/100 * val.price * val.qty, 0);
-  const discountPreserentage = (subtotalBeforeDiscount - subtotalAfterDiscount) / subtotalBeforeDiscount * 100;
+  const discountPreserentage = data.length > 0 ? (subtotalBeforeDiscount - subtotalAfterDiscount) / subtotalBeforeDiscount * 100 : 0;
   const discount = subtotalBeforeDiscount - subtotalAfterDiscount;
-  const deliveryFee = 10;
+  const deliveryFee = data.length > 0 ? 10 : 0;
   const total = subtotalAfterDiscount + deliveryFee;
 
   return (
@@ -143,8 +143,8 @@ const OrderSummary = ({data}) => {
 };
 
 const CartPage = () => {
-  const cartItems = useCartItems((state) => state.cartItems);
-  const setCart = useCartItems((state) => state.setCart);
+  const cartItems = useGlobalState((state) => state.cartItems);
+  const setCart = useGlobalState((state) => state.setCart);
   return (
     <section className="main-container">
       <Budge thisPage={"cart"} />

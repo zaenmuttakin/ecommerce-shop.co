@@ -48,7 +48,7 @@
     @apply h-full w-full xl:h-fit md:w-2/3 xl:w-full inset-x-0 mx-auto border bg-white border-black-10 rounded-2xl p-6 pb-32 xl:pb-4 overflow-y-scroll hide-scroll-bar;
   }
   .filter-btn {
-    @apply pt-6 pb-4 px-4 xl:relative z-30 bottom-0 left-0 right-0 w-full md:w-2/3 xl:w-full mx-auto bg-white fixed;
+    @apply pt-6 pb-4 px-4 xl:relative z-30 bottom-0 left-0 right-0 w-full md:w-2/3 xl:w-max mx-auto bg-white fixed;
   }
   .multi-range {
     @apply relative h-6 mt-5 mb-10;
@@ -87,8 +87,11 @@
   .cart-badge {
     @apply absolute -top-2 -right-3 bg-red-100 w-5 aspect-square rounded-full text-white text-[10px] font-satoshi text-center py-0.5
   }
+  .alert-container {
+    @apply fixed top-5 inset-x-0 mx-auto w-max xl:top-16 z-10
+  }
   .alert {
-    @apply absolute flex items-center gap-5 p-5 border border-l-4 border-black-10 border-l-green shadow-lg rounded top-36 right-10 z-10 bg-white/50 backdrop-blur-sm
+    @apply flex items-center gap-5 p-5 border border-l-4 border-black-10 border-l-green shadow-lg rounded bg-white/50 backdrop-blur-sm mb-3
   }
 }
 

@@ -1,23 +1,24 @@
 import { Fragment } from "react";
-import Notification from "../Elements/Notification/TopNotificaton";
 import NavMenu from "../Elements/NavMenu";
 import Logo from "../Elements/Logo";
 import InputField from "../Elements/InputField/InputField";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { useCartItems } from "../../hooks/globalState/useCartItems";
 import TopNotification from "../Elements/Notification/TopNotificaton";
+import Alert from "../Elements/Notification/Alert";
+import { useGlobalState } from "../../hooks/globalState/useGlobalState";
 const Navbar = () => {
   const srcRef = useRef(null);
   const [displaySrc, setDisplaySrc] = useState(false);
   const handleSrc = () => {
     setDisplaySrc(!displaySrc);
   };
-  const cartQty = useCartItems((state) => state.cartItems.length);
-  const addToCartItem = useCartItems((state) => state.addToCart);
+  const cartQty = useGlobalState((state) => state.cartItems.length);
+
   return (
     <Fragment>
       <TopNotification />
+      <Alert />
       <nav className="bg-white ">
         <div className="main-container relative flex justify-between items-center gap-2 py-4 xl:gap-20 xl:py-6">
           <div className="flex items-center gap-5 xl:gap-20">
@@ -64,9 +65,9 @@ const Navbar = () => {
               />
               {cartQty > 0 && <p className="cart-badge">{cartQty}</p>}
             </Link>
-            <button className="cursor-pointer" onClick={() => addToCartItem()}>
+            <Link to={"/ecommerce-shop.co/account/"} className="cursor-pointer" >
               <i className="ic-user tx-3 hover:text-black-60 smooth" />
-            </button>
+            </Link>
           </div>
         </div>
       </nav>

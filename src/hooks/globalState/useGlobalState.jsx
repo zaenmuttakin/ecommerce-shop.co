@@ -1,6 +1,7 @@
 import { create } from "zustand";
 
-const useCartItems = create((set) => ({
+const useGlobalState = create((set) => ({
+  // cart state -->
   cartItems: JSON.parse(localStorage.getItem("cartItems")) || [],
   addToCart: (data) =>
     set((state) => {
@@ -28,9 +29,13 @@ const useCartItems = create((set) => ({
       }
 
       localStorage.setItem("cartItems", JSON.stringify(newCart));
-      console.log("success");
+      state.setPushNotification({
+        type: "add",
+        data: { alertType: "success", message: "Item added to cart" },
+      });
       return { cartItems: newCart };
     }),
+
   setCart: (type, data) =>
     set((state) => {
       const item = state.cartItems.find((i) => i.idCart == data);
@@ -63,6 +68,10 @@ const useCartItems = create((set) => ({
         case "DELETE":
           state.cartItems.splice(itemIndex, 1);
           setItem = [...state.cartItems];
+          state.setPushNotification({
+            type: "add",
+            data: { alertType: "success", message: "Item has been deleted" },
+          });
           break;
 
         default:
@@ -75,6 +84,20 @@ const useCartItems = create((set) => ({
       );
       return { cartItems: setItem || [...state.cartItems] };
     }),
+
+  // notification state
+  pushNotification: [],
+  setPushNotification: (data) =>
+    set((state) => {
+      switch (data.type) {
+        case "add":
+          return { pushNotification: [...state.pushNotification, {id : Math.random(), ...data.data}] };
+        case "remove":
+          return { pushNotification: state.pushNotification.filter((i) => i.id !== data.id) };
+        default:
+          break;
+      }
+    }),
 }));
 
 const getCardId = (carts) => {
@@ -82,6 +105,4 @@ const getCardId = (carts) => {
   return newId;
 };
 
-
-
-export { useCartItems };
+export { useGlobalState };

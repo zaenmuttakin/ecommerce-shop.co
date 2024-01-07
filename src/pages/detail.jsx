@@ -10,7 +10,8 @@ import { useParams } from "react-router-dom";
 import DropList from "../components/Elements/DropList/DropList";
 import Budge from "../components/Elements/Budge/Budge";
 import useDatacart from "../hook/useDatacart";
-import { useCartItems } from "../hooks/globalState/useCartItems";
+import { useGlobalState } from "../hooks/globalState/useGlobalState";
+import Alert from "../components/Elements/Notification/Alert";
 
 // tabs content ↘↘↘
 const TabProduct = () => {
@@ -213,8 +214,7 @@ const DetailPage = () => {
 
   const productSlices = products.slice(0, 5);
 
-  const addToCart = useCartItems((state) => state.addToCart);
-  const cartItems = useCartItems((state) => state.cartItems);
+  const addToCart = useGlobalState((state) => state.addToCart); 
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
